@@ -3,7 +3,7 @@
   margin: 40px auto;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 12px rgb(0 0 0 / 8%);
 }
 
 /* ---- Tab Navigation Bar ---- */
@@ -17,7 +17,7 @@
   padding: 14px 28px;
   border: none;
   background: transparent;
-  color: #ffffffaa;
+  color: #fffa;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
@@ -27,14 +27,14 @@
 }
 
 .tabs-tab:hover {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  background: rgb(255 255 255 / 10%);
 }
 
 /* ---- Active Tab ---- */
 .tabs-tab-active {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  background: rgb(255 255 255 / 15%);
 }
 
 .tabs-tab-active::after {
@@ -49,7 +49,7 @@
 
 /* ---- Tab Panels ---- */
 .tabs-panels {
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #e0e0e0;
   border-top: none;
 }
@@ -59,16 +59,23 @@
   line-height: 1.7;
   color: #444;
   font-size: 1rem;
-  animation: fadeIn 0.3s ease;
+  animation: fade-in 0.3s ease;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(4px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ---- Responsive ---- */
-@media (max-width: 600px) {
+@media (width <= 600px) {
   .tabs-tab {
     padding: 12px 16px;
     font-size: 0.85rem;
